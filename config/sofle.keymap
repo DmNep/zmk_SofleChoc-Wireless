@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 /*
- * Temporarily here because nice nano v2 spi is not defined on ZMK Yet
+ * Временно здесь, потому что Nice Nano V2 SPI еще не определен на ZMK
  * Source: https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/reviung41/boards/nice_nano.overlay
  * GitHub Issue: https://github.com/zmkfirmware/zmk/issues/885
  */
@@ -64,7 +64,7 @@
     };
 };
 
-/* END temporary RGB support section */
+/* Конец временного разделения поддержки RGB */
 
 
 / {
@@ -79,7 +79,7 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |        | ExtPw |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER|  ENTER |        | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
-&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                              &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
+&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &rgb_ug RGB_TOG                     &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                               &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                               &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE &ext_power EP_TOG &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
@@ -90,7 +90,7 @@
         };
 
         lower_layer {
-// TODO: Some binds are waiting for shifted keycode support.
+// TODO: Некоторые облигации ждут поддержки сменного ключа.
 // ------------------------------------------------------------------------------------------------------------
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
 // | `     |   1 |   2 |   3  |   4  |   5  |                   |   6  |   7   |   8   |   9  |    0  |  F12  |
